@@ -1,50 +1,69 @@
-<!DOCTYPE HTML>
+<?php
+if (!isset($_GET['loadpage'])){
+	$url = "index.php?loadpage=home";
+		echo '<META HTTP-EQUIV=REFRESH CONTENT=".1;'.$url.'">';
+}
+$page = (isset($_GET['loadpage']) && $_GET['loadpage'] != '') ? $_GET['loadpage'] : '';
+?>
+<!DOCTYPE html>
 <html>
 <head>
-<title>
-	SHOPIFY
-</title>
-</head>	
-<link rel="stylesheet" href="webexam.css" type="text/css">
-
-<header>
-<div class="picture1">
-<a class="text"> OJT </a>
-<a class="text">  LOGO </a>
-<a class="text">  SAMPLE </a>
-</div>
-<br>						
-<br>
-<a class="btn16"> LOGIN </a></li>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a class="btn17"> SIGN UP </a></li>
-</header>
-
-  <main class="main">
-    <center><h1 data-text="ONLINE SHOPPING"><span>WELCOME TO OUR CONTACTLESS CUSTOMER LOGBOOK SYSTEM!</span><h1/></center>
-	
-		<center><a href="" class="btn btn-one"> TRY IT NOW<a/></center>
-		<br>
-		<h2><span>OJT PROJECT</span><h2/>
-		<br>
-  </main>
-  
-  
-
-    <footer>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<center><a href="#" class="fa fa-facebook"></a>
-	<a href="#" class="fa fa-twitter"></a>
-	<a href="#" class="fa fa-google"></a></center>
-
-	
-	</footer>
-
-
+	<link href="https://fonts.googleapis.com/css?family=Mukta|PT+Sans|Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="logo"><img src="images/sisig.png" width="170" height="100"></div>
+			<div id="navigation">
+				<ul>
+				  	<li><a href="index.php?loadpage=home">Home</a></li>
+				  	<li><a href="index.php?loadpage=about">About Us</a></li>
+				  	<li><a href="index.php?loadpage=menu">Menu</a></l>
+				
+				  	<li><a href="index.php?loadpage=contact">Contact Us</a></li>
+				</ul>	
+			</div>
+		</div>
+			<div id="content">
+			<?php
+					switch($page){
+						case 'home': 
+							require_once 'home.php';
+							break;
+						;
+						case 'about': 
+							require_once 'about.php';
+							break;
+						;
+						case 'product': 
+							require_once 'product.php';
+							break;
+						;
+						case 'menu': 
+							require_once 'menu.php';
+							break;
+						;
+						case 'gallery': 
+							require_once 'gallery.php';
+							break;
+						;
+						case 'contact': 
+							require_once 'contact.php';
+							break;
+						;
+				}
+			?>
+			</div>
+			<div id="footer">
+				<div id="closer">
+					<h2>
+					<p>Bacolod City, Philippines | Email | Contact number</p>
+					<p>Copyright &copy; 2020  Customer Logbook System. All Rights Reserve.<p>
+					</h2>
+				</div>
+			</div>
+	</div>
+</body>
 </html>

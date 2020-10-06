@@ -1,0 +1,71 @@
+body{
+	background-image: url("../images/dota.jpg");
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+}
+#container{
+	width: 1000px;
+	min-height: 500px;
+	border: 0 solid #000;
+	margin: 0 auto;
+}
+#header{
+	width: 96%;
+	height: 100px;
+	padding: 5px 0;
+	margin-bottom: 5px;
+	border: 0 solid #f00;
+	background-color: skyblue;
+}
+#logo{
+	width: 25%;
+	height: 140px;
+	border: 0 solid #d44;
+	float: left;
+}
+#navigation{
+	width: 70%;
+	height: 60px;
+	float: right;
+	display: block;
+}
+#content{
+	width: 94%;
+	min-height: 500px;
+	padding: 10px;
+	display: block;
+	border: 0 solid #f00;
+	background-color: skyblue;
+}
+#footer{
+	width: 94%;
+	min-height: 100px;
+	padding: 10px;
+	display: block;
+	border: 0 solid #f00;
+	background-color: rgba(0,0,255,0.3);
+}
+#navigation ul{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#navigation li{
+	display: inline-block;
+	margin-left: 50px;
+	padding-top: 40px;
+}
+#navigation a{
+	display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#navigation li a:hover {
+	font-weight: bold;
+	color: #FF6C00;
+}
